@@ -38,18 +38,14 @@ int main() {
 	{
 		putchar(integerA & mask ? '1' : '0');
 		mask >>= 1;
-		/*if (i % 8 == 0)
-		{
-			putchar(' ');
-		}*/
 		if ((i % order - 1 == 0) || (i % order - 9 == 0))
 		{
 			putchar(' ');
 		}
 	}
 	union {
-		int A[2] /*= { 127, 128 } */;
-		double doubleC /*= 1.2345e+2*/;
+		int A[2];
+		double doubleC;
 	};
 	cout << "\n";
 	cout << "Enter a number of type double whose binary representation you want to get: ";
@@ -57,17 +53,12 @@ int main() {
 	cout << "\n";
 	cout << "A:" << " " << "{" << A[0] << "," << A[1] << "}" << " " << "place in memory" << " " << "-" << " " << &A << " " << "doubleC:" << " " << doubleC << " " << "place in memory" << " " << "-" << " " << &doubleC << "\n";
 	int order2 = sizeof(double) * 8;
-	//cout << A << " " << order2 << " " << &A << endl;
 	for (int j = 1; j >= 0; j--)
 	{
 		mask = 1 << order - 1;
 		for (int i = 1; i <= order2/2; i++) {
 			putchar(A[j] & mask ? '1' : '0');
 			mask >>= 1;
-			/*if (i % 8 == 0)
-			{
-				putchar(' ');
-			}*/
 			if (((j == 1) && (i % order - 1 == 0)) || ((j == 1) && (i % order - 12 == 0)))
 			{
 				putchar(' ');
