@@ -2,7 +2,7 @@
 using namespace std;
 int main() {
 	setlocale (0, "");
-	cout << "int: " << sizeof(int) << "  short int: " << sizeof(short int) << "  float: " << sizeof(float) << "  double: " << sizeof(double) << "  long double: " << sizeof(long double) << "  char: " << sizeof(char) << "  bool: " << sizeof(bool);
+	cout << "int: " << sizeof(int) << "  short int: " << sizeof(short int) << "  long int: " << sizeof(long int) << "  float: " << sizeof(float) << "  double: " << sizeof(double) << "  long double: " << sizeof(long double) << "  char: " << sizeof(char) << "  bool: " << sizeof(bool);
 	cout << "\n";
 	cout << "Enter the integer whose binary representation you want to get: ";
 	int a;
